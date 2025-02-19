@@ -19,6 +19,8 @@ This is a Laravel-based API that imports products from a `products.json` file, s
     
     cp .env.example .env
     composer update
+    php artisan key:generate
+
 3. Build and start the Docker containers:
 
         docker-compose up -d
@@ -44,6 +46,12 @@ Example
 
 
          docker-compose exec app php artisan import:products 10
+         
+Running Tests
+
+
+        docker-compose exec app php artisan test
+
 
 
 
