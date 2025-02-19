@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Product 1",
+        "link": "https://example.com/product1",
+        "image_link": "https://example.com/image1.jpg",
+        "price": 100.00,
+        "currency": "USD"
+    },
+    {
+        "name": "Product 2",
+        "link": "https://example.com/product2",
+        "image_link": "https://example.com/image2.jpg",
+        "price": 200.00,
+        "currency": "USD"
+    }
+]
