@@ -17,8 +17,6 @@ This is a Laravel-based API that imports products from a `products.json` file, s
 
     Copy the .env.example file to .env:
     
-    bash
-    Copy
     cp .env.example .env
     composer update
 3. Build and start the Docker containers:
@@ -27,17 +25,29 @@ This is a Laravel-based API that imports products from a `products.json` file, s
 4. Run database migrations:
 
         docker-compose exec app php artisan migrate
-   
-CLI Command
-The application includes a CLI command to import products from products.json, adjust their prices, and output the updated list.
+### CLI Command:
 
-Usage
-Place your products.json file in the root directory of the project.
 
-Run the command:
-    docker-compose exec app php artisan import:products <percentage>
-    Example
-    docker-compose exec app php artisan import:products 10
+The application includes a CLI command to import products from products.json, adjust their prices, and output the updated list.:
+
+
+
+ Place your products.json file in the root directory of the project.
+ 
+ 5.Run the command:
+
+     docker-compose exec app php artisan import:products <percentage>
+
+Replace <percentage> with the percentage by which you want to adjust the prices (e.g., 10 for a 10% increase).
+
+Example
+
+
+         docker-compose exec app php artisan import:products 10
+
+
+
+
 
 
 
