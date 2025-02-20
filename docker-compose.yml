@@ -10,6 +10,15 @@ services:
     working_dir: /var/www/html
     volumes:
       - .:/var/www/html
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: laravel_db
+      DB_PORT: 5432
+      DB_DATABASE: laravel
+      DB_USERNAME: laravel
+      DB_PASSWORD: secret
+    depends_on:
+      - db
     networks:
       - laravel_network
 
@@ -22,6 +31,8 @@ services:
     volumes:
       - .:/var/www/html
       - ./docker/nginx:/etc/nginx/conf.d
+    depends_on:
+      - app
     networks:
       - laravel_network
 
