@@ -18,7 +18,7 @@ This is a Laravel-based API that imports products from a `products.json` file, s
     Copy the .env.example file to .env:
     
     cp .env.example .env
-    composer update
+    composer install
     php artisan key:generate
 
 3. Build and start the Docker containers:
